@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 20
           cache: yarn
-          corepack-enable: true
+      - run: corepack enable
 
       - name: Install dependencies
         run: yarn install
