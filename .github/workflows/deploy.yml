@@ -8,7 +8,6 @@ jobs:
   build_site:
     runs-on: ubuntu-latest
     steps:
-      - run: node --version
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -17,7 +16,6 @@ jobs:
       #   uses: pnpm/action-setup@v3
       #   with:
       #     version: 8
-      - run: node --version
       - name: Enable Corepack
         run: corepack enable
       - name: Install Node.js
@@ -25,7 +23,7 @@ jobs:
         with:
           node-version: 20
           cache: yarn
-      - run: node --version
+
       - name: Install dependencies
         run: yarn install
 
